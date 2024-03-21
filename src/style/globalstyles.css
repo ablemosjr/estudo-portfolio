@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --dark-color: #000000;
+  --white-color: #FFFFFF;
+  --bg: #EEEEED;
+  --body-text: #333333;
+  --color-detail: #D3D3D3;
+  --scroll-color: #3CC362;
+  --dark-green: #355E50;
+  --error-color: #C2271F;
+}
