@@ -1,1 +1,131 @@
-/* Styles */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+section {
+  min-height: 100dvh;
+}
+
+a {
+  color: var(--text);
+}
+
+.scroll-watcher {
+  height: 15px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: var(--scroll-color);
+  width: 100%;
+  scale: 0 1;
+  transform-origin: left;
+  -webkit-transform-origin: left;
+  animation: scroll-watcher linear;
+  -webkit-animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes scroll-watcher {
+  to { scale: 1 1; }
+}
+
+.container {
+  padding: var(--fluid-pd-20-350);
+}
+
+.home {
+  display: grid;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.config {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-top: 10px;
+}
+
+.config__language {
+  display: flex;
+  align-items: center;
+}
+
+.config__language p {
+  font-size: clamp(0.875rem, 0.7677rem + 0.4577vi, 1.5rem);
+  font-weight: 200;
+  cursor: pointer;
+}
+
+p.language--selected {
+  color: var(--dark-green);
+  font-weight: 600;
+}
+
+.language__divider {
+  display: block;
+  width: 1px;
+  height: 10px;
+  background-color: var(--color-detail);
+  margin: 0 15px;
+}
+
+.intro--animation-hidden {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translateX(-100%);
+  transition: all 3s;
+}
+
+.intro--animation-show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 3s;
+}
+
+.intro__name {
+  font-family: "Waiting for the Sunrise", cursive;
+  font-size: clamp(2rem, 1.4851rem + 2.1968vi, 5rem);
+  transform: translateY(15px);
+}
+
+.intro__career {
+  font-size: clamp(2.5rem, 1.8993rem + 2.5629vi, 6rem);
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.intro__icons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.intro__icons a:hover svg path {
+  stroke: var(--dark-green);
+}
+
+@media screen and (max-width: 768px) and (hover) {
+  .intro__icons a svg path {
+    stroke: var(--dark-green);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .intro__name {
+    transform: translateY(25px);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .intro__icons a svg {
+    width: 50px;
+    height: 50px;
+  }
+}

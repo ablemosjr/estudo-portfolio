@@ -15,9 +15,12 @@ a {
   --dark-color: #000000;
   --white-color: #FFFFFF;
   --bg: #EEEEED;
-  --body-text: #333333;
+  --text: #333333;
   --color-detail: #D3D3D3;
-  --scroll-color: #3CC362;
+  --color: #C1C1C1;
+  --scroll-color: #6A9E87;
   --dark-green: #355E50;
   --error-color: #C2271F;
+
+  --fluid-pd-20-350: 20px clamp(1.25rem, -2.2898rem + 15.103vi, 21.875rem);
 }
