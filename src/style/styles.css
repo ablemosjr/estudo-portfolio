@@ -111,9 +111,62 @@ p.language--selected {
   stroke: var(--dark-green);
 }
 
+.about {
+  display: grid;
+  align-items: center;
+  justify-items: end;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.about--animation-hidden {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translateX(100%);
+  transition: all 3.5s;
+}
+
+.about--animation-show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 3.5s;
+}
+
+.about p {
+  text-align: right;
+  font-size: clamp(1.125rem, 0.9963rem + 0.5492vi, 1.875rem);
+  max-width: 600px;
+} 
+
 @media screen and (max-width: 768px) and (hover) {
   .intro__icons a svg path {
     stroke: var(--dark-green);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about { 
+    place-items: center;
+  }
+
+  .about p {
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .about--animation-hidden {
+    opacity: 0;
+    filter: blur(2px);
+    transform: scale(.5);
+    transition: all 2s;
+  }
+  
+  .about--animation-show {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+    transition: all 2s;
   }
 }
 

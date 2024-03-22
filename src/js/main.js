@@ -16,4 +16,8 @@ function animation(targetSelector, showClass, hideClass) {
   observer.observe(element);
 }
 
+// Home Animation
 animation('.intro', 'intro--animation-show', 'intro--animation-hidden');
+
+// About Animation
+animation('.about', 'about--animation-show', 'about--animation-hidden');
