@@ -1,6 +1,8 @@
 body {
   background-color: var(--bg);
   color: var(--text);
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 section {
@@ -40,8 +42,6 @@ a {
 
 .home {
   display: grid;
-  user-select: none;
-  -webkit-user-select: none;
 }
 
 .config {
@@ -124,8 +124,6 @@ section.about  {
   display: grid;
   align-items: center;
   justify-items: end;
-  user-select: none;
-  -webkit-user-select: none;
 }
 
 .about--animation-hidden {
@@ -160,8 +158,6 @@ section.about  {
   display: flex;
   flex-direction: column;
   position: relative;
-  user-select: none;
-  -webkit-user-select: none;
 }
 
 .card::after {
@@ -235,6 +231,32 @@ section.about  {
   color: var(--dark-color);
 }
 
+.curriculum {
+  display: grid;
+  place-items: center;
+  align-content: space-evenly;
+  min-height: 350px;
+  text-align: center;
+}
+
+.curriculum__text {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.25rem, 1.0569rem + 0.8238vi, 2.375rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  width: 65%;
+}
+
+.btn {
+  font-size: clamp(0.875rem, 0.7677rem + 0.4577vi, 1.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
 @media screen and (max-width: 768px) {
   .intro__icons a svg path {
     stroke: var(--dark-green);
@@ -301,6 +323,16 @@ section.about  {
   }
 }
 
+@media screen and (max-width: 1023px) {
+  .btn--curriculum {
+    padding: 25px 80px;
+    color: var(--white-color);
+    background-color: var(--dark-green);
+    border-radius: 2px;
+    animation: sway 2s infinite;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .intro__name {
     transform: translateY(25px);
@@ -311,11 +343,72 @@ section.about  {
   .container {
     padding: var(--fluid-pd-160-500);
   }
+
+  .btn--curriculum {
+    padding: 30px 100px;
+    color: #333;
+    transition: .5s ease-in-out;
+  }
+  
+  .btn--curriculum::after, 
+  .btn--curriculum::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 3px solid #333;
+    border-radius: 2px;
+    transition: .5s ease-in-out;
+  }
+  
+  .btn--curriculum::after {
+    transform: translate(5px, 5px);
+  }
+  
+  .btn--curriculum::before {
+    transform: translate(-5px, -5px);
+  }
+  
+  .btn--curriculum:hover {
+    color: var(--dark-green);
+    font-weight: 900;
+  }
+  
+  .btn--curriculum:hover::after,
+  .btn--curriculum:hover::before {
+    transform: translate(0);
+    color: var(--dark-green);
+    border-color: var(--dark-green);
+    border-radius: 2px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
   .intro__icons a svg {
     width: 50px;
     height: 50px;
+  }
+}
+
+@keyframes sway {
+  15% {
+    transform: translateX(5px);
+  }
+  30% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+  65% {
+    transform: translateX(-3px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
