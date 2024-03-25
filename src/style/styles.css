@@ -284,7 +284,9 @@ section.about  {
     transform: scale(1);
     transition: all 2s;
   }
-  
+}
+
+@media screen and (max-width: 1023px) {
   .card__wrapper {
     display: flex;
     flex-direction: column;
@@ -321,9 +323,7 @@ section.about  {
   .card__description {
     width: 100%;
   }
-}
 
-@media screen and (max-width: 1023px) {
   .btn--curriculum {
     padding: 25px 80px;
     color: var(--white-color);
