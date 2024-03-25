@@ -307,6 +307,12 @@ section.about  {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: var(--fluid-pd-160-500);
+  }
+}
+
 @media screen and (min-width: 1440px) {
   .intro__icons a svg {
     width: 50px;

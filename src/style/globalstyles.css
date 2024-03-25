@@ -23,4 +23,5 @@ a {
   --error-color: #C2271F;
 
   --fluid-pd-20-350: 20px clamp(1.25rem, -2.2898rem + 15.103vi, 21.875rem);
+  --fluid-pd-160-500: 20px clamp(10rem, -4.1667rem + 22.1354vi, 31.25rem);
 }
