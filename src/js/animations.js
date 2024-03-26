@@ -1,5 +1,5 @@
-function animation(targetSelector, showClass, hideClass) {
-  const element = document.querySelector(targetSelector);
+function animation(showClass, hideClass) {
+  const elements = document.querySelectorAll('.' + hideClass);
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -13,7 +13,7 @@ function animation(targetSelector, showClass, hideClass) {
     });
   });
 
-  observer.observe(element);
+  elements.forEach((element) => observer.observe(element));
 }
 
 // Card Animation
@@ -34,7 +34,8 @@ for (let index = 0; index < card.length; index++) {
 }
 
 // Home Animation
-animation('.intro', 'intro--animation-show', 'intro--animation-hidden');
+// Project Animation
+animation('animation-ltr-show', 'animation-ltr-hidden');
 
 // About Animation
-animation('.about', 'about--animation-show', 'about--animation-hidden');
+animation('about--animation-show', 'about--animation-hidden');

@@ -17,7 +17,7 @@ a {
   height: 15px;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 3;
   background-color: var(--scroll-color);
   width: 100%;
   scale: 0 1;
@@ -75,14 +75,14 @@ p.language--selected {
   margin: 0 15px;
 }
 
-.intro--animation-hidden {
+.animation-ltr-hidden {
   opacity: 0;
   filter: blur(2px);
   transform: translateX(-100%);
   transition: all 3s;
 }
 
-.intro--animation-show {
+.animation-ltr-show {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
@@ -116,8 +116,8 @@ main {
 }
 
 section.about  {
-  min-height: 20dvh;
-  margin: 250px 0 200px 0;
+  min-height: 30dvh;
+  margin: 30dvh 0;
 }
 
 .about {
@@ -130,14 +130,14 @@ section.about  {
   opacity: 0;
   filter: blur(2px);
   transform: translateX(100%);
-  transition: all 3.5s;
+  transition: all 2.5s;
 }
 
 .about--animation-show {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
-  transition: all 3.5s;
+  transition: all 2.5s;
 }
 
 .about__description  {
@@ -151,6 +151,18 @@ section.about  {
   flex-direction: column;
   justify-content: center;
   gap: 30px;
+}
+
+.projects :nth-child(2) {
+  transition-delay: 500ms;
+}
+
+.projects :nth-child(3) {
+  transition-delay: 750ms;
+}
+
+.projects :nth-child(4) {
+  transition-delay: 1s;
 }
 
 .card {
@@ -237,6 +249,7 @@ section.about  {
   align-content: space-evenly;
   min-height: 350px;
   text-align: center;
+  margin: 80px 0;
 }
 
 .curriculum__text {
