@@ -270,6 +270,27 @@ section.about  {
   position: relative;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .animation-ltr-hidden {
+    opacity: 0;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: none;
+  }  
+
+  .about--animation-hidden {
+    opacity: 0;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: none;
+  }
+
+  .btn--curriculum {
+    animation: none !important;
+    -webkit-animation: none !important;
+  } 
+}
+
 @media screen and (max-width: 768px) {
   .intro__icons a svg path {
     stroke: var(--dark-green);
@@ -344,6 +365,27 @@ section.about  {
     border-radius: 2px;
     animation: sway 2s infinite;
   }
+
+  @keyframes sway {
+    15% {
+      transform: translateX(5px);
+    }
+    30% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(3px);
+    }
+    65% {
+      transform: translateX(-3px);
+    }
+    80% {
+      transform: translateX(2px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -402,26 +444,5 @@ section.about  {
   .intro__icons a svg {
     width: 50px;
     height: 50px;
-  }
-}
-
-@keyframes sway {
-  15% {
-    transform: translateX(5px);
-  }
-  30% {
-    transform: translateX(-5px);
-  }
-  50% {
-    transform: translateX(3px);
-  }
-  65% {
-    transform: translateX(-3px);
-  }
-  80% {
-    transform: translateX(2px);
-  }
-  100% {
-    transform: translateX(0);
   }
 }
