@@ -16,6 +16,11 @@ function animation(showClass, hideClass) {
   elements.forEach((element) => observer.observe(element));
 }
 
+// Home Animation
+// About Animation
+// Project Animation
+animation('animation-ltr-show', 'animation-ltr-hidden');
+
 // Card Animation
 const card = document.querySelectorAll('.card');
 const hoverReveal = document.querySelectorAll('.card__image');
@@ -32,10 +37,3 @@ for (let index = 0; index < card.length; index++) {
     hoverReveal[index].style.transform = 'translate(-200%, -50%) rotate(-5deg)';
   });
 }
-
-// Home Animation
-// Project Animation
-animation('animation-ltr-show', 'animation-ltr-hidden');
-
-// About Animation
-animation('about--animation-show', 'about--animation-hidden');
