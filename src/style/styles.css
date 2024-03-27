@@ -13,6 +13,10 @@ a {
   color: var(--text);
 }
 
+main {
+  overflow-x: hidden;
+}
+
 .scroll-watcher {
   height: 15px;
   position: fixed;
@@ -109,10 +113,6 @@ p.language--selected {
 
 .intro__icons a:hover svg path {
   stroke: var(--dark-green);
-}
-
-main {
-  overflow-x: hidden;
 }
 
 section.about  {
@@ -236,7 +236,7 @@ section.about  {
 
 .pill {
   padding: 5px 12px;
-  background-color: var(--grey);
+  border: 1px solid var(--text);
   border-radius: 2px;
   font-size: clamp(0.875rem, 0.7677rem + 0.4577vi, 1.5rem);
   font-weight: 400;
@@ -249,13 +249,13 @@ section.about  {
   align-content: space-evenly;
   min-height: 350px;
   text-align: center;
-  margin: 80px 0;
+  margin: 80px 0 100px 0;
 }
 
 .curriculum__text {
   font-family: 'Inter', sans-serif;
   font-size: clamp(1.25rem, 1.0569rem + 0.8238vi, 2.375rem);
-  font-weight: 900;
+  font-weight: 700;
   text-transform: uppercase;
   width: 65%;
 }
@@ -269,6 +269,118 @@ section.about  {
   cursor: pointer;
   position: relative;
 }
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact__call {
+  font-size: clamp(2.5rem, 1.8993rem + 2.5629vi, 6rem);
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.contact__description {
+  font-size: clamp(1.125rem, 0.9963rem + 0.5492vi, 1.875rem);
+  width: 60%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+form {
+  width: 100%;
+  padding-top: 80px;
+}
+
+.form__box {
+  width: 80%;
+  display: flex;
+  border-bottom: 1px solid var(--color-detail);
+  margin-bottom: 25px;
+}
+
+.box__number {
+  font-size: clamp(1rem, 0.9571rem + 0.1831vi, 1.25rem);
+  margin: 15px 15px 0 0;
+}
+
+.box__input {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.box__input label {
+  font-size: clamp(1.125rem, 0.9963rem + 0.5492vi, 1.875rem);
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.box__input input, textarea {
+  height: 60px;
+  background: transparent;  
+  font-size: clamp(1.125rem, 0.9963rem + 0.5492vi, 1.875rem);
+  color: var(--dark-color);
+  border: none;
+  padding: 10px 10px 10px 0;
+  margin-top: 5px;
+  transition: .5s ease-in-out;
+}
+
+.box__input textarea {
+  min-height: 150px;
+  resize: none;
+}
+
+.box__input input:focus {
+  padding-left: 10px;
+  outline: none;
+}
+
+.box__input textarea:focus {
+  padding-left: 10px;
+  outline: none;
+}
+
+::placeholder {
+  color: var(--color-detail);
+}
+
+.error {
+  font-size: clamp(0.875rem, 0.7677rem + 0.4577vi, 1.5rem);
+  color: var(--error-color);
+  margin-bottom: 8px;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  transform: translateX(-25px);
+}
+
+.error::before {
+  content: '';
+  display: block;
+  background-color: var(--error-color);
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.error--visible {
+  visibility: visible !important;
+}
+
+.btn--submit {
+  padding: 15px 30px;
+  color: var(--white-color);
+  background-color: var(--dark-green);
+  border: none;
+  border-radius: 2px;
+}
+
 
 @media (prefers-reduced-motion: reduce) {
   .animation-ltr-hidden {
@@ -289,6 +401,20 @@ section.about  {
     animation: none !important;
     -webkit-animation: none !important;
   } 
+}
+
+@media screen and (max-width: 475px) {
+  .contact {
+    align-items: flex-start;
+  }
+
+  .contact__description {
+    text-align: left;
+  }
+
+  .form__box {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -401,7 +527,7 @@ section.about  {
 
   .btn--curriculum {
     padding: 30px 100px;
-    color: #333;
+    color: var(--text);
     transition: .5s ease-in-out;
   }
   
@@ -413,7 +539,7 @@ section.about  {
     left: 0;
     bottom: 0;
     right: 0;
-    border: 3px solid #333;
+    border: 3px solid var(--text);
     border-radius: 2px;
     transition: .5s ease-in-out;
   }
@@ -438,11 +564,21 @@ section.about  {
     border-color: var(--dark-green);
     border-radius: 2px;
   }
+
+  .contact__description {
+    margin-top: calc(20px + 2vw);
+  }
 }
 
 @media screen and (min-width: 1440px) {
   .intro__icons a svg {
     width: 50px;
     height: 50px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .form__box {
+    width: 60%;
   }
 }

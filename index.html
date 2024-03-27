@@ -54,7 +54,7 @@
 
   <main>
     <section class="about container about--animation-hidden">
-      <p class="about__description">Dedicado à criar soluções inovadoras e experiências de usuário excepcionais, utilizando as mais modernas tecnologias de desenvolvimento.</p>
+      <h2 class="about__description">Dedicado à criar soluções inovadoras e experiências de usuário excepcionais, utilizando as mais modernas tecnologias de desenvolvimento.</h2>
     </section>
 
     <section class="projects container">
@@ -186,8 +186,72 @@
       </a>
     </div>
 
-    <section class="container">
+    <section class="contact container">
+      <h3 class="contact__call">Vamos conversar!</h3>
+      <p class="contact__description">Agora que você já sabe bastante sobre mim, me mande sua dúvida ou dê um feedback</p>
 
+      <form action="" id="form-contact">
+        <div class="form__container">
+          <div class="form__box">
+            <span class="box__number">01</span>
+
+            <div class="box__input">
+              <label for="input-name">Qual o seu nome?</label>
+              <input
+                type="text" 
+                name="input-name" 
+                id="input-name"
+                placeholder="Fulano *"
+                required
+              >
+
+              <span class="error" id="name-error"></span>
+            </div>
+          </div>
+
+          <div class="form__box">
+            <span class="box__number">02</span>
+
+            <div class="box__input">
+              <label for="input-email">Qual o seu email?</label>
+              <input
+                type="text" 
+                name="input-email" 
+                id="input-email"
+                placeholder="fulano@email.com *"
+                required
+              >
+
+              <span class="error" id="email-error"></span>
+            </div>
+          </div>
+
+          <input
+            type="hidden" 
+            name="subject" 
+            id="subject"
+            value="| Enviado pelo portfolio"
+          >
+
+          <div class="form__box">
+            <span class="box__number">03</span>
+
+            <div class="box__input">
+              <label for="input-message">Sua mensagem:</label>
+              <textarea
+                name="input-message"
+                id="input-message"
+                placeholder="Olá Alessandro, estou procurando por um desenvolvedor e te encontrei! Você poderia me ajudar com..."
+                required
+              ></textarea>
+
+              <span class="error" id="message-error"></span>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn--submit">Enviar</button>
+      </form>
     </section>
   </main>
 
