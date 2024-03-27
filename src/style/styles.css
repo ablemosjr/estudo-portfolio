@@ -379,6 +379,41 @@ form {
   border-radius: 2px;
 }
 
+footer {
+  margin-top: 150px;
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  font-size: clamp(0.875rem, 0.7677rem + 0.4577vi, 1.5rem);
+  font-weight: 400;
+  padding: 5px;
+  transition: .2s ease-in-out;
+}
+
+.link:hover {
+  color: var(--dark-green);
+  font-weight: 700;
+}
+
+.footer__divider {
+  display: block;
+  width: 2px;
+  height: 12px;
+  background-color: var(--color-detail);
+  margin: 0 15px;
+}
+
+footer p {
+  font-size: clamp(0.875rem, 0.7677rem + 0.4577vi, 1.5rem);
+  font-weight: 200;
+  margin-top: 20px;
+  padding: 5px 5px 50px 5px;
+}
 
 @media (prefers-reduced-motion: reduce) {
   .btn--curriculum {
@@ -387,7 +422,7 @@ form {
   } 
 }
 
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 576px) {
   .contact {
     align-items: flex-start;
   }
@@ -398,6 +433,15 @@ form {
 
   .form__box {
     width: 100%;
+  }
+
+  .footer__links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__divider {
+    display: none;
   }
 }
 
