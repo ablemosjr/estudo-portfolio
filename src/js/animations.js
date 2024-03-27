@@ -16,12 +16,10 @@ function animation(showClass, hideClass) {
   elements.forEach((element) => observer.observe(element));
 }
 
-// Home Animation
-// About Animation
-// Project Animation
+// Animation
 animation('animation-ltr-show', 'animation-ltr-hidden');
 
-// Card Animation
+// Card hover Animation
 const card = document.querySelectorAll('.card');
 const hoverReveal = document.querySelectorAll('.card__image');
 
