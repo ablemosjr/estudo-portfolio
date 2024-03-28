@@ -379,6 +379,10 @@ form {
   border-radius: 2px;
 }
 
+.btn--submit:active {
+  filter: brightness(1.1);
+}
+
 footer {
   margin-top: 100px;
 }
@@ -415,6 +419,63 @@ footer p {
   padding: 5px 5px 50px 5px;
 }
 
+.form__success {
+  margin: auto;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: var(--dark-green);
+}
+.check::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 50px;
+  border-width: 0 4px 4px 0;
+  border-style: solid;
+  transform: rotate(45deg);
+  border-color: var(--white-color);
+}
+
+.form__confirm {
+  text-align: center;
+  font-size: clamp(1.125rem, 0.9963rem + 0.5492vi, 1.875rem);
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.btn--backToTop {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  bottom: 80px;
+  right: 80px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--text);
+  border-radius: 2px;
+  z-index: 3;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: background-color .3s, opacity .5s, visibility .5s, .2s ease-in;
+}
+
+.btn--backToTop:active {
+  filter: brightness(1.1);
+}
+
+.backToTop--show {
+  opacity: 1;
+  visibility: visible;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .btn--curriculum {
     animation: none !important;
@@ -447,6 +508,11 @@ footer p {
   .footer__divider {
     display: none;
   }
+
+  .btn--backToTop {
+    bottom: 20px !important;
+    right: 20px !important;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -462,6 +528,20 @@ footer p {
     max-width: 300px;
     text-align: center;
   }
+
+  .btn--backToTop {
+    bottom: 25px;
+    right: 25px;
+    border-width: 3px;
+    background-color: var(--dark-green);
+    border-color: var(--bg);
+    
+  }
+
+  .btn--backToTop svg path {
+    stroke: var(--bg);
+  }
+
 }
 
 @media screen and (max-width: 1023px) {
@@ -532,10 +612,23 @@ footer p {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .intro__name {
     transform: translateY(25px);
   }
+    
+  .btn--curriculum:active {
+    filter: brightness(1.1);
+  }
+
+  .btn--backToTop:hover {
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+  }
+  
+  .btn--backToTop:hover svg path {
+    stroke: var(--bg);
+  }  
 }
 
 @media screen and (min-width: 1024px) {
@@ -599,35 +692,4 @@ footer p {
   .form__box {
     width: 60%;
   }
-}
-
-.form__success {
-  margin: auto;
-}
-
-.check {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background-color: var(--dark-green);
-}
-.check::after {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 50px;
-  border-width: 0 4px 4px 0;
-  border-style: solid;
-  transform: rotate(45deg);
-  border-color: var(--white-color);
-}
-
-.form__confirm {
-  text-align: center;
-  font-size: clamp(1.125rem, 0.9963rem + 0.5492vi, 1.875rem);
-  font-weight: 500;
-  margin-top: 15px;
 }
