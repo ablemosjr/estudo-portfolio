@@ -1,3 +1,5 @@
+const backToTopButton = document.querySelector('#backToTop');
+
 function animation(showClass, hideClass) {
   const elements = document.querySelectorAll('.' + hideClass);
 
@@ -35,3 +37,21 @@ for (let index = 0; index < card.length; index++) {
     hoverReveal[index].style.transform = 'translate(-200%, -50%) rotate(-5deg)';
   });
 }
+
+// Back to Top Button
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 800) {
+    backToTopButton.classList.add('backToTop--show');
+  } else {
+    backToTopButton.classList.remove('backToTop--show');
+  }
+});
+
+backToTopButton.addEventListener('click', (ev) => {
+  ev.preventDefault();
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
