@@ -55,18 +55,42 @@ main {
   padding-top: 10px;
 }
 
+.config button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.config__theme {
+  margin-right: 50px;
+}
+
+.config__theme svg {
+  width: clamp(1.25rem, 1.1427rem + 0.4577vi, 1.875rem);
+  height: clamp(1.25rem, 1.1427rem + 0.4577vi, 1.875rem);
+}
+
+.config__theme svg path {
+  stroke: var(--dark-green);
+}
+
+.dark-theme .config__theme svg path {
+  stroke: var(--white-color);
+}
+
 .config__language {
   display: flex;
   align-items: center;
 }
 
-.config__language p {
+.config__language button {
   font-size: clamp(0.875rem, 0.7677rem + 0.4577vi, 1.5rem);
   font-weight: 200;
-  cursor: pointer;
+  color: var(--text);
 }
 
-p.language--selected {
+button.language--selected {
   color: var(--dark-green);
   font-weight: 600;
 }
@@ -213,6 +237,10 @@ section.about  {
 
 .card__infos div {
   width: 80%;
+}
+
+.card__infos svg path {
+  stroke: var(--dark-green);
 }
 
 .card__title {
@@ -451,6 +479,7 @@ footer p {
 }
 
 .btn--backToTop {
+  background-color: var(--bg);
   display: grid;
   place-items: center;
   position: fixed;
@@ -467,6 +496,10 @@ footer p {
   transition: background-color .3s, opacity .5s, visibility .5s, .2s ease-in;
 }
 
+.btn--backToTop svg path {
+  stroke: var(--dark-color);
+}
+
 .btn--backToTop:active {
   filter: brightness(1.1);
 }
@@ -481,6 +514,16 @@ footer p {
     animation: none !important;
     -webkit-animation: none !important;
   } 
+}
+
+@media screen and (max-width: 320px) {
+  .config__language {
+    margin-right: 10px;
+  }
+
+  .animation-ltr-show {
+    transform: translateX(-5px);
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -685,6 +728,10 @@ footer p {
   .intro__icons a svg {
     width: 50px;
     height: 50px;
+  }
+
+  .config__theme {
+    margin-right: 80px;
   }
 }
 
