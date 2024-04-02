@@ -16,7 +16,243 @@
   <title>Alessandro Lemos | Portfolio</title>
 </head>
 <body>
+  <header class="scroll-watcher"></header>
+  <button class="btn--backToTop" id="backToTop">
+    <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.5 27.7083L17.5 7.29159" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M7.29134 17.5L17.4997 7.29167L27.708 17.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>      
+  </button>
+
+  <section class="home container">
+    <div class="config">
+      <img class="config__flag" src="src/assets/icon/brazil-flag.svg" alt="Bandeira do Brasil - Idioma PT/BR">
+      <button class="config__theme" id="button-theme"></button>
+    </div>
+
+    <div class="intro animation-ltr-hidden">
+      <h2 class="intro__name" id="name">Alessandro Lemos</h2>
+      <h1 class="intro__career" id="career">Desenvolvedor Frontend <br>& UI UX Designer</h1>
+    
+      <div class="intro__icons">
+        <a href="https://github.com/ablemosjr" 
+          target="_blank" rel="noopener noreferrer"
+        >
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.7518 29.5305C10.5005 31.4053 10.5005 26.4059 8 25.781M25.5036 33.28V28.4431C25.5505 27.8472 25.4699 27.2481 25.2673 26.6856C25.0647 26.1232 24.7446 25.6103 24.3283 25.1811C28.2542 24.7436 32.38 23.2563 32.38 16.4322C32.3797 14.6873 31.7082 13.0092 30.5046 11.7454C31.0746 10.2187 31.0343 8.53122 30.3921 7.03349C30.3921 7.03349 28.9168 6.59605 25.5036 8.88324C22.638 8.10687 19.6174 8.10687 16.7518 8.88324C13.3386 6.59605 11.8633 7.03349 11.8633 7.03349C11.2211 8.53122 11.1808 10.2187 11.7508 11.7454C10.5382 13.0186 9.86604 14.7118 9.87538 16.4697C9.87538 23.2438 14.0012 24.7311 17.927 25.2186C17.5157 25.6435 17.1985 26.1502 16.996 26.7058C16.7935 27.2613 16.7103 27.8533 16.7518 28.4431V33.28" stroke="#BFD9D1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>            
+        </a>
+        <a href="https://www.linkedin.com/in/ablemosjunior/" 
+          target="_blank" rel="noopener noreferrer"
+        >
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25.167 16.6667C27.1561 16.6667 29.0638 17.4569 30.4703 18.8634C31.8768 20.2699 32.667 22.1776 32.667 24.1667V32.9167H27.667V24.1667C27.667 23.5036 27.4036 22.8678 26.9348 22.3989C26.4659 21.9301 25.83 21.6667 25.167 21.6667C24.504 21.6667 23.8681 21.9301 23.3992 22.3989C22.9304 22.8678 22.667 23.5036 22.667 24.1667V32.9167H17.667V24.1667C17.667 22.1776 18.4572 20.2699 19.8637 18.8634C21.2702 17.4569 23.1779 16.6667 25.167 16.6667Z" stroke="#BFD9D1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13 18H8V33H13V18Z" stroke="#BFD9D1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10.5 13C11.8807 13 13 11.8807 13 10.5C13 9.11929 11.8807 8 10.5 8C9.11929 8 8 9.11929 8 10.5C8 11.8807 9.11929 13 10.5 13Z" stroke="#BFD9D1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="about container animation-ltr-hidden">
+      <h2 class="about__description" id="about">Dedicado à criar soluções inovadoras e experiências de usuário excepcionais, utilizando as mais modernas tecnologias de desenvolvimento.</h2>
+    </section>
+
+    <section class="projects container" id="projects">
+      <div class="card animation-ltr-hidden">
+        <a  class="card__wrapper"
+          href="https://page-hbomax.netlify.app/" 
+          target="_blank" rel="noopener noreferrer"
+        >
+          <div class="card__image">
+            <img class="image--hidden" 
+              src="https://user-images.githubusercontent.com/89210954/218158784-48babb51-f883-4b0e-aad4-3ff953205f5a.png" alt="Image Estudo do site HBO" 
+            >
+          </div>
   
-  <script src="src/js/main.js"></script>
+          <div class="card__infos">
+            <div>
+              <h3 class="card__title">
+                Estudo do site HBO
+              </h3>
+              <p class="card__description">
+                Consiste na criação de uma landing page para o site da HBO, oferecendo uma experiência de aprendizado no desenvolvimento web
+              </p>
+  
+              <div class="card__pills">
+                <p class="pill">
+                  HTML
+                </p>
+                <p class="pill">
+                  CSS
+                </p>
+              </div>
+            </div>
+  
+            <svg width="60" height="50" viewBox="0 0 60 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.5 25L47.5 25" stroke="#355E50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M30 10.4167L47.5 25L30 39.5834" stroke="#355E50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>   
+          </div>
+        </a>
+      </div>
+
+      <div class="card animation-ltr-hidden">
+        <a  class="card__wrapper"
+          href="" 
+          target="_blank" rel="noopener noreferrer"
+        >
+          <div class="card__image">
+            <img class="image--hidden" 
+              src="https://github.com/ablemosjr/decoder-oneChallenge/assets/89210954/050417ce-52f1-4ee3-a808-b304ba54164f" alt="" 
+            >
+          </div>
+  
+          <div class="card__infos">
+            <div>
+              <h3 class="card__title">
+                Decodificador Oracle ONE
+              </h3>
+              <p class="card__description">
+                Desafio proposto pelo ONE (Oracle & Alura), um programa de educação e empregabilidade, para criar um codificador e decodificador de textos
+              </p>
+  
+              <div class="card__pills">
+                <p class="pill">
+                  HTML
+                </p>
+                <p class="pill">
+                  CSS
+                </p>
+                <p class="pill">
+                  Javascript
+                </p>
+              </div>
+            </div>
+  
+            <svg width="60" height="50" viewBox="0 0 60 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.5 25L47.5 25" stroke="#355E50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M30 10.4167L47.5 25L30 39.5834" stroke="#355E50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>   
+          </div>
+        </a>
+      </div>
+
+    </section>
+
+    <div class="curriculum container">
+      <p class="curriculum__text">
+        Quer me conhecer melhor? Confira meu currículo!
+      </p>
+      <a class="btn btn--curriculum"
+        href="https://drive.google.com/file/d/14oCYhZZMJnTitCreCQyjsZu0eLzY-QHT/view?usp=sharing" 
+        target="_blank" rel="noopener noreferrer"
+      >
+        Currículo
+      </a>
+    </div>
+
+    <section class="contact container">
+      <h3 class="contact__call">Vamos conversar!</h3>
+      <p class="contact__description">Agora que você já sabe bastante sobre mim, me mande sua dúvida ou dê um feedback</p>
+
+      <form action="submit" id="form-contact">
+        <div class="form__container">
+          <div class="form__box">
+            <span class="box__number">01</span>
+
+            <div class="box__input">
+              <label for="input-name">Qual o seu nome?</label>
+              <input
+                type="text" 
+                name="input-name" 
+                id="input-name"
+                placeholder="John Doe *"
+                required
+              >
+
+              <span class="error" id="name-error"></span>
+            </div>
+          </div>
+
+          <div class="form__box">
+            <span class="box__number">02</span>
+
+            <div class="box__input">
+              <label for="input-email">Qual o seu email?</label>
+              <input
+                type="text" 
+                name="input-email" 
+                id="input-email"
+                placeholder="johndoe@email.com *"
+                required
+              >
+
+              <span class="error" id="email-error"></span>
+            </div>
+          </div>
+
+          <input
+            type="hidden" 
+            name="subject" 
+            id="subject"
+            value="| Enviado pelo portfolio (02/04/2024)"
+          >
+
+          <div class="form__box">
+            <span class="box__number">03</span>
+
+            <div class="box__input">
+              <label for="input-message">Sua mensagem:</label>
+              <textarea
+                name="input-message"
+                id="input-message"
+                placeholder="Olá Alessandro, estou procurando por um desenvolvedor e te encontrei! Você poderia me ajudar com... *"
+                required
+              ></textarea>
+
+              <span class="error" id="message-error"></span>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn--submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div class="footer__links animation-ltr-hidden">
+      <a
+        class="link" 
+        href="https://www.linkedin.com/in/ablemosjunior/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        LinkedIn
+      </a>
+      <span class="footer__divider"></span>
+      <a 
+        class="link" 
+        href="https://github.com/ablemosjr" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        Github
+      </a>
+      <span class="footer__divider"></span>
+      <a class="link"  href="mailto:ablemosjunior@gmail.com">
+        ablemosjunior@gmail.com
+      </a>
+    </div>
+
+    <p>Projetado por Alessandro Lemos</p>
+  </footer>
+
+  <script src="src/js/animations.js"></script>
+  <script src="src/js/changeTheme.js"></script>
+  <script src="src/js/form.js" ></script>
 </body>
 </html>

@@ -15,9 +15,25 @@ a {
   --dark-color: #000000;
   --white-color: #FFFFFF;
   --bg: #EEEEED;
-  --body-text: #333333;
+  --text: #333333;
   --color-detail: #D3D3D3;
-  --scroll-color: #3CC362;
+  --grey: #C1C1C1;
+  --scroll-color: #6A9E87;
   --dark-green: #355E50;
   --error-color: #C2271F;
+
+  --fluid-pd-20-350: 20px clamp(1.25rem, -2.2898rem + 15.103vi, 21.875rem);
+  --fluid-pd-160-500: 20px clamp(10rem, -4.1667rem + 22.1354vi, 31.25rem);
+}
+
+.dark {
+  --dark-color: #FFFFFF;
+  --white-color: #000;
+  --bg: #222222;
+  --text: #BBBBBB;
+  --color-detail: #686868;
+  --grey: #C1C1C1;
+  --scroll-color: #8DD1B3;
+  --dark-green: #49DC5D;
+  --error-color: #FC5623;
 }
