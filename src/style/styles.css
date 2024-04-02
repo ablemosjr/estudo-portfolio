@@ -427,7 +427,8 @@ footer p {
 }
 
 .form__success {
-  margin: auto;
+  display: grid;
+  place-items: center;
 }
 
 .check {
