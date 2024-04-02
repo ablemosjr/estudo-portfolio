@@ -26,18 +26,13 @@
 
   <section class="home container">
     <div class="config">
+      <img class="config__flag" src="src/assets/icon/brazil-flag.svg" alt="Bandeira do Brasil - Idioma PT/BR">
       <button class="config__theme" id="button-theme"></button>
-
-      <div class="config__language">
-        <button class="language__pt language--selected">PT</button>
-        <span class="language__divider"></span>
-        <button class="language__en">EN</button>
-      </div>
     </div>
 
     <div class="intro animation-ltr-hidden">
-      <h2 class="intro__name">Alessandro Lemos</h2>
-      <h1 class="intro__career">Desenvolvedor Frontend <br>& UI UX Designer</h1>
+      <h2 class="intro__name" id="name">Alessandro Lemos</h2>
+      <h1 class="intro__career" id="career">Desenvolvedor Frontend <br>& UI UX Designer</h1>
     
       <div class="intro__icons">
         <a href="https://github.com/ablemosjr" 
@@ -62,28 +57,28 @@
 
   <main>
     <section class="about container animation-ltr-hidden">
-      <h2 class="about__description">Dedicado à criar soluções inovadoras e experiências de usuário excepcionais, utilizando as mais modernas tecnologias de desenvolvimento.</h2>
+      <h2 class="about__description" id="about">Dedicado à criar soluções inovadoras e experiências de usuário excepcionais, utilizando as mais modernas tecnologias de desenvolvimento.</h2>
     </section>
 
-    <section class="projects container">
+    <section class="projects container" id="projects">
       <div class="card animation-ltr-hidden">
         <a  class="card__wrapper"
-          href="" 
+          href="https://page-hbomax.netlify.app/" 
           target="_blank" rel="noopener noreferrer"
         >
           <div class="card__image">
             <img class="image--hidden" 
-              src="src/assets/icon/favicon.png" alt="" 
+              src="https://user-images.githubusercontent.com/89210954/218158784-48babb51-f883-4b0e-aad4-3ff953205f5a.png" alt="Image Estudo do site HBO" 
             >
           </div>
   
           <div class="card__infos">
             <div>
               <h3 class="card__title">
-                Lorem ipsum dolor sit amet
+                Estudo do site HBO
               </h3>
               <p class="card__description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor est ut volutpat fringilla.
+                Consiste na criação de uma landing page para o site da HBO, oferecendo uma experiência de aprendizado no desenvolvimento web
               </p>
   
               <div class="card__pills">
@@ -111,17 +106,17 @@
         >
           <div class="card__image">
             <img class="image--hidden" 
-              src="src/assets/icon/favicon.png" alt="" 
+              src="https://github.com/ablemosjr/decoder-oneChallenge/assets/89210954/050417ce-52f1-4ee3-a808-b304ba54164f" alt="" 
             >
           </div>
   
           <div class="card__infos">
             <div>
               <h3 class="card__title">
-                Lorem ipsum dolor sit amet
+                Decodificador Oracle ONE
               </h3>
               <p class="card__description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor est ut volutpat fringilla.
+                Desafio proposto pelo ONE (Oracle & Alura), um programa de educação e empregabilidade, para criar um codificador e decodificador de textos
               </p>
   
               <div class="card__pills">
@@ -131,43 +126,8 @@
                 <p class="pill">
                   CSS
                 </p>
-              </div>
-            </div>
-  
-            <svg width="60" height="50" viewBox="0 0 60 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.5 25L47.5 25" stroke="#355E50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M30 10.4167L47.5 25L30 39.5834" stroke="#355E50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>   
-          </div>
-        </a>
-      </div>
-
-      <div class="card animation-ltr-hidden">
-        <a  class="card__wrapper"
-          href="" 
-          target="_blank" rel="noopener noreferrer"
-        >
-          <div class="card__image">
-            <img class="image--hidden" 
-              src="src/assets/icon/favicon.png" alt="" 
-            >
-          </div>
-  
-          <div class="card__infos">
-            <div>
-              <h3 class="card__title">
-                Lorem ipsum dolor sit amet
-              </h3>
-              <p class="card__description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor est ut volutpat fringilla.
-              </p>
-  
-              <div class="card__pills">
                 <p class="pill">
-                  HTML
-                </p>
-                <p class="pill">
-                  CSS
+                  Javascript
                 </p>
               </div>
             </div>
@@ -209,7 +169,7 @@
                 type="text" 
                 name="input-name" 
                 id="input-name"
-                placeholder="Fulano *"
+                placeholder="John Doe *"
                 required
               >
 
@@ -226,7 +186,7 @@
                 type="text" 
                 name="input-email" 
                 id="input-email"
-                placeholder="fulano@email.com *"
+                placeholder="johndoe@email.com *"
                 required
               >
 
@@ -249,7 +209,7 @@
               <textarea
                 name="input-message"
                 id="input-message"
-                placeholder="Olá Alessandro, estou procurando por um desenvolvedor e te encontrei! Você poderia me ajudar com..."
+                placeholder="Olá Alessandro, estou procurando por um desenvolvedor e te encontrei! Você poderia me ajudar com... *"
                 required
               ></textarea>
 
@@ -293,7 +253,7 @@
       </a>
     </div>
 
-    <p>Projeto por Alessandro Lemos</p>
+    <p>Projetado por Alessandro Lemos</p>
   </footer>
 
   <script src="src/js/animations.js"></script>
